@@ -1,1 +1,196 @@
-<iframe title="Dashboard_AnalisisRespuestaERT" width="600" height="373.5" src="https://app.powerbi.com/view?r=eyJrIjoiMzU3YzIzMGEtOTIzZi00MmZkLWFiZDktZDRmZTAyMDc0ODMxIiwidCI6IjBmOWUzNWRiLTU0NGYtNGY2MC1iZGNjLTVlYTQxNmU2ZGM3MCIsImMiOjh9" frameborder="0" allowFullScreen="true"></iframe>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ANÁLISIS DE LA RESPUESTA 2025 - OCHA</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f5f5f5;
+            color: #333;
+            line-height: 1.6;
+        }
+        
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        .header {
+            background: linear-gradient(135deg, #0078d4 0%, #106ebe 100%);
+            color: white;
+            padding: 30px 0;
+            margin-bottom: 30px;
+            border-radius: 8px;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        
+        .header h1 {
+            font-size: 2.5rem;
+            font-weight: 300;
+            margin-bottom: 10px;
+        }
+        
+        .header p {
+            font-size: 1.2rem;
+            opacity: 0.9;
+        }
+        
+        .ocha-logo {
+            display: inline-block;
+            margin-right: 15px;
+            vertical-align: middle;
+        }
+        
+        .dashboard-container {
+            background: white;
+            border-radius: 8px;
+            padding: 20px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            margin-bottom: 30px;
+        }
+        
+        .dashboard-frame {
+            width: 100%;
+            height: 600px;
+            border: none;
+            border-radius: 4px;
+        }
+        
+        .info-section {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            margin-top: 20px;
+        }
+        
+        .info-section h3 {
+            color: #0078d4;
+            margin-bottom: 10px;
+        }
+        
+        .footer {
+            text-align: center;
+            padding: 20px;
+            color: #666;
+            font-size: 0.9rem;
+        }
+        
+        @media (max-width: 768px) {
+            .header h1 {
+                font-size: 1.8rem;
+            }
+            
+            .header p {
+                font-size: 1rem;
+            }
+            
+            .container {
+                padding: 10px;
+            }
+            
+            .dashboard-frame {
+                height: 500px;
+            }
+        }
+        
+        .loading {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 200px;
+            color: #0078d4;
+            font-size: 1.1rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <div class="ocha-logo">
+                🌍
+            </div>
+            <h1>ANÁLISIS DE LA RESPUESTA 2025</h1>
+            <p>Cifras de Recurrencia de Emergencias - Fuente Monitor</p>
+            <p style="font-size: 0.9rem; margin-top: 10px;">OCHA - Oficina de Coordinación de Asuntos Humanitarios</p>
+        </header>
+        
+        <main>
+            <div class="dashboard-container">
+                <div class="loading" id="loading">
+                    Cargando dashboard interactivo...
+                </div>
+                
+                <!-- REPLACE THIS IFRAME WITH YOUR POWER BI EMBED CODE -->
+<!--                 <iframe 
+                    id="powerbi-frame"
+                    class="dashboard-frame" 
+                    title="Dashboard_AnalisisRespuestaERT"
+                    src="https://app.powerbi.com/view?r=eyJrIjoiMzU3Yz"
+                    allowfullscreen="true"
+                    style="display: none;">
+                </iframe> -->
+
+                <iframe 
+                    title="Dashboard_AnalisisRespuestaERT" 
+                    width="600" height="373.5" 
+                    src="https://app.powerbi.com/view?r=eyJrIjoiMzU3YzIzMGEtOTIzZi00MmZkLWFiZDktZDRmZTAyMDc0ODMxIiwidCI6IjBmOWUzNWRiLTU0NGYtNGY2MC1iZGNjLTVlYTQxNmU2ZGM3MCIsImMiOjh9" 
+                    frameborder="0" 
+                    allowFullScreen="true">
+                </iframe>
+                <!-- END REPLACE SECTION -->
+            </div>
+            
+            <div class="info-section">
+                <h3>📊 Información del Dashboard</h3>
+                <p><strong>Fuente:</strong> Monitor de Emergencias OCHA</p>
+                <p><strong>Período:</strong> 03/01/2025 - 02/08/2025</p>
+                <p><strong>Última actualización:</strong> <span id="last-update"></span></p>
+                <p><strong>Estado:</strong> Activo</p>
+            </div>
+            
+            <div class="info-section">
+                <h3>ℹ️ Instrucciones de Uso</h3>
+                <ul style="margin-left: 20px;">
+                    <li>Use los filtros de fecha en la parte superior para ajustar el período de análisis</li>
+                    <li>Haga clic en los gráficos para interactuar y obtener más detalles</li>
+                    <li>Use el modo de pantalla completa para una mejor visualización</li>
+                    <li>Los datos se actualizan automáticamente según la fuente Monitor</li>
+                </ul>
+            </div>
+        </main>
+        
+        <footer class="footer">
+            <p>&copy; 2025 OCHA - Oficina de Coordinación de Asuntos Humanitarios de las Naciones Unidas</p>
+            <p>Este informe interactivo presenta cifras de emergencias registradas por gestores de información.</p>
+        </footer>
+    </div>
+    
+    <script>
+        // Show the iframe after a short delay and hide loading
+        setTimeout(function() {
+            document.getElementById('loading').style.display = 'none';
+            document.getElementById('powerbi-frame').style.display = 'block';
+        }, 1000);
+        
+        // Set current date
+        document.getElementById('last-update').textContent = new Date().toLocaleDateString('es-ES');
+        
+        // Handle iframe loading errors
+        document.getElementById('powerbi-frame').onerror = function() {
+            document.getElementById('loading').innerHTML = '⚠️ Error al cargar el dashboard. Verifique la conexión.';
+            document.getElementById('loading').style.color = '#d13438';
+        };
+    </script>
+</body>
+</html>
